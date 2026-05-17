@@ -11,18 +11,19 @@ The architecture focuses on maintainability, scalability, and production-style c
 🛠️ Tech Stack & Architecture
 
 **Framework:** Flutter  
-**State Management:** flutter_bloc – Used for predictable and reactive state management.  
-**Networking:** Dio – Handles GET, POST, PATCH, and DELETE requests with advanced networking capabilities.  
-**Architecture Pattern:** BLoC (Business Logic Component)  
-**Data Modeling:** Custom Dart model classes with JSON serialization.  
+**State Management:**  flutter_bloc – Used for predictable and reactive state management.  
+**Networking:**  Dio – Handles GET, POST, PATCH, and DELETE requests with advanced networking capabilities.  
+**Architecture Pattern:**  BLoC (Business Logic Component)  
+**Data Modeling:**  Custom Dart model classes with JSON serialization.  
 
 ✨ Key Features
 
-**Live API Integration:** Automatically fetches users from a remote REST API on startup.  
-**Reactive State Management:** Uses BLoC events and states to rebuild the UI dynamically.  
-**Full CRUD Operations:** Supports creating, updating, deleting, and retrieving users.  
-**Optimistic UI Experience:** Updates the interface instantly while syncing with the backend.  
-**Structured Error Handling:** Handles API failures, invalid responses, and loading states cleanly. **Scalable Architecture:** Organized layers for maintainable and production-ready development.  
+**Live API Integration:**  Automatically fetches users from a remote REST API on startup.  
+**Reactive State Management:**  Uses BLoC events and states to rebuild the UI dynamically.  
+**Full CRUD Operations:**  Supports creating, updating, deleting, and retrieving users.  
+**Optimistic UI Experience:**  Updates the interface instantly while syncing with the backend.  
+**Structured Error Handling:**  Handles API failures, invalid responses, and loading states cleanly. 
+**Scalable Architecture:**  Organized layers for maintainable and production-ready development.  
 
 📱 Application Demo & Previews
 
@@ -52,27 +53,34 @@ The main dashboard consumes API data through BLoC state streams, dynamically ren
 📂 Project Structure
 
 ```text
+
 lib/
- ├── blocs/
- │    ├── user_bloc.dart
- │    ├── user_event.dart
- │    └── user_state.dart
- │
- ├── models/
- │    └── user_model.dart
- │
- ├── services/
- │    └── api_service.dart
- │
- ├── repositories/
- │    └── user_repository.dart
- │
- ├── screens/
- │    ├── home_screen.dart
- │    ├── create_user_screen.dart
- │    └── update_user_screen.dart
- │
- ├── widgets/
- │    └── user_tile.dart
- │
- └── main.dart
+├── core/
+│   ├── constants/
+│   │   └── api_constants.dart
+│   │
+│   └── network/
+│       └── dio_client.dart
+│
+├── features/
+│   └── users/
+│       ├── data/
+│       │   ├── datasources/
+│       │   │   └── user_remote_datasource.dart
+│       │   │
+│       │   ├── models/
+│       │   │   └── user_model.dart
+│       │   │
+│       │   └── repositories/
+│       │       └── user_repository.dart
+│       │
+│       └── presentation/
+│           ├── bloc/
+│           │   ├── user_bloc.dart
+│           │   ├── user_event.dart
+│           │   └── user_state.dart
+│           │
+│           └── screens/
+│               └── home_screen.dart
+│
+└── main.dart
