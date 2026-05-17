@@ -1,4 +1,4 @@
-CRUD API Consumption using Dio and BLoC State Management
+# CRUD API Consumption using Dio and BLoC State Management
 
 A clean, scalable, and responsive Flutter user management application built using modern Flutter architecture principles. This project demonstrates professional separation of concerns through BLoC state management and RESTful API integration using Dio.
 
@@ -48,7 +48,7 @@ The main dashboard consumes API data through BLoC state streams, dynamically ren
 | 🚀 Swipe-to-Delete Interaction |
 |---|
 | **Smooth Native UX:** Uses `Dismissible` widgets integrated with BLoC events for instant visual feedback. |
-| <img src="screenshots/Swip Delete.png" width="100%" alt="Swipe Delete Interaction"/> |
+| <img src="screenshots/Swipe Delete.png" width="100%" alt="Swipe Delete Interaction"/> |
 
 📂 Project Structure
 
@@ -84,3 +84,36 @@ lib/
 │               └── home_screen.dart
 │
 └── main.dart
+
+```
+📋 Requirements
+
+- Flutter SDK
+- Dart SDK
+- Android Studio or VS Code
+- Emulator or Physical Device
+
+ 📦 Main Dependencies
+
+```yaml
+flutter_bloc: ^9.0.0
+dio: ^5.9.2
+equatable: ^2.0.7
+```
+
+🔧 How to Run
+
+Follow these steps to get the project running on your local machine:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Yanet-Abreham/flutter-BLOC-Dio-crud.git
+
+# 2. Navigate into the project folder
+cd flutter-BLOC-Dio-crud
+
+# 3. Install dependencies
+flutter pub get
+
+# 4. Run the application
+flutter run
