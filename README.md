@@ -31,7 +31,7 @@ The architecture focuses on maintainability, scalability, and production-style c
 
 The main dashboard consumes API data through BLoC state streams, dynamically rendering reusable user profile components.
 
-<img src="screenshots/fetch.png" width="100%" alt="User Directory Dashboard"/>
+<img src="screenshots/Fetch.png" width="100%" alt="User Directory Dashboard"/>
 
 ⚡ CRUD Lifecycle Workflows
 
